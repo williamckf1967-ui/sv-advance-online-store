@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0755df">
+  <title>SV Advance Technology Resources | Computer Hardware</title>
+  <meta name="description" content="RAM memory, SSD, NVMe and motherboard enquiries from SV Advance Technology Resources, Malaysia.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="SV Advance Technology Resources home">
+      <span class="brand-mark">SV</span>
+      <span><strong>SV ADVANCE</strong><small>TECHNOLOGY RESOURCES</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    <nav id="mainNav">
+      <a href="#categories">Categories</a>
+      <a href="#products">Products</a>
+      <a href="#dealer">Dealer Orders</a>
+      <button class="cart-nav" id="openCart">Cart <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">COMPUTER HARDWARE · MALAYSIA</p>
+        <h1>Reliable components.<br><span>Ready for your next build.</span></h1>
+        <p class="hero-text">Explore RAM memory, SSD storage and motherboards for upgrades, repairs and new PC builds.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#products">Browse Products</a>
+          <a class="button secondary" href="#dealer">Dealer Enquiries</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="hero-chip chip-one"><span>RAM</span><b>DDR3 · DDR4 · DDR5</b></div>
+        <div class="hero-chip chip-two"><span>SSD / NVMe</span><b>SATA · M.2</b></div>
+        <div class="hero-chip chip-three"><span>Motherboards</span><b>Multiple platforms</b></div>
+        <div class="hero-orbit"></div>
+      </div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="section-heading">
+        <div><p class="eyebrow">SHOP BY CATEGORY</p><h2>Find the right component</h2></div>
+        <p class="muted">Choose a category to filter the catalogue.</p>
+      </div>
+      <div class="category-grid">
+        <button class="category-card" data-category="RAM">
+          <div class="category-art ram-art"><span class="ram-stick"></span><span class="ram-stick second"></span></div>
+          <div><h3>RAM Memory</h3><p>DDR3, DDR4, DDR5</p><span class="category-link">Browse memory ↗</span></div>
+        </button>
+        <button class="category-card" data-category="SSD / NVMe">
+          <div class="category-art ssd-art"><div class="ssd-drive">NVMe SSD</div><div class="ssd-drive second">SATA SSD</div></div>
+          <div><h3>SSD / NVMe</h3><p>SATA and M.2 NVMe</p><span class="category-link">Browse storage ↗</span></div>
+        </button>
+        <button class="category-card" data-category="Motherboard">
+          <div class="category-art board-art"><div class="board"><span></span><i></i><b></b></div></div>
+          <div><h3>Motherboards</h3><p>51 RISC and other brands</p><span class="category-link">Browse boards ↗</span></div>
+        </button>
+        <button class="category-card" data-category="Dealer Orders">
+          <div class="category-art dealer-art"><div class="dealer-box">DEALER<br>ORDERS</div></div>
+          <div><h3>Dealer Orders</h3><p>Bulk orders and quotations</p><span class="category-link">Contact sales ↗</span></div>
+        </button>
+      </div>
+    </section>
+
+    <section class="section products-section" id="products">
+      <div class="section-heading">
+        <div><p class="eyebrow">PRODUCT CATALOGUE</p><h2>Popular products</h2></div>
+        <p class="muted" id="productCountText">Browse the available catalogue</p>
+      </div>
+      <div class="catalog-layout">
+        <aside class="filters">
+          <div class="filter-title"><strong>Filters</strong><button id="resetFilters" class="text-button">Reset</button></div>
+          <label class="search-label" for="searchInput">Search products</label>
+          <input id="searchInput" type="search" placeholder="Model, brand or spec…">
+          <label for="categoryFilter">Category</label>
+          <select id="categoryFilter">
+            <option value="All">All categories</option>
+            <option>RAM</option><option>SSD / NVMe</option><option>Motherboard</option>
+          </select>
+          <label for="typeFilter">Memory / storage type</label>
+          <select id="typeFilter">
+            <option value="All">All types</option><option>DDR3</option><option>DDR4</option><option>DDR5</option><option>SATA SSD</option><option>NVMe</option>
+          </select>
+          <label for="sortFilter">Sort by</label>
+          <select id="sortFilter">
+            <option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name A–Z</option>
+          </select>
+          <p class="filter-note">Prices shown are sample entries. Update <code>products.js</code> with your confirmed selling prices before publishing.</p>
+        </aside>
+        <div class="product-area">
+          <div class="active-filters"><span id="activeFilterText">All products</span><button id="clearCategory" class="text-button">Clear filter</button></div>
+          <div class="product-grid" id="productGrid"></div>
+          <div class="empty-state" id="emptyState" hidden>No products match these filters. Try another search.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dealer-section" id="dealer">
+      <div>
+        <p class="eyebrow light">FOR DEALERS & RETAILERS</p>
+        <h2>Need bulk quantities or a quotation?</h2>
+        <p>Contact our sales team for dealer enquiries, availability and bulk-order pricing.</p>
+      </div>
+      <a class="button white-button" id="dealerWhatsApp" href="#" target="_blank" rel="noopener">Enquire on WhatsApp ↗</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="brand footer-brand"><span class="brand-mark">SV</span><span><strong>SV ADVANCE</strong><small>TECHNOLOGY RESOURCES</small></span></div>
+    <p>Computer hardware distribution · Malaysia</p>
+    <p class="footer-small">Product availability and prices are subject to confirmation. All prices are in Malaysian Ringgit (RM).</p>
+  </footer>
+
+  <div class="overlay" id="cartOverlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-header"><div><p class="eyebrow">YOUR ORDER</p><h2>Shopping cart</h2></div><button id="closeCart" class="close-button" aria-label="Close cart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom">
+      <div class="cart-total"><span>Estimated total</span><strong id="cartTotal">RM 0.00</strong></div>
+      <p class="cart-disclaimer">Final price, stock and delivery charges will be confirmed by our team.</p>
+      <button class="button primary full-width" id="checkoutWhatsApp">Send order via WhatsApp</button>
+      <button class="button secondary full-width" id="continueShopping">Continue shopping</button>
+    </div>
+  </aside>
+  <div class="modal-overlay" id="detailOverlay" hidden>
+    <section class="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+      <button class="close-button modal-close" id="closeDetail" aria-label="Close details">×</button>
+      <div id="detailContent"></div>
+    </section>
+  </div>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
